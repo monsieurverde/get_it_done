@@ -1,13 +1,41 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>{{title}}</title>
-    </head>
-<body>
-
-    {% block content %}
-    {% endblock %}
-
-</body>
+    <div class="content">
+       <head>
+            <div id="header">
+                <title>{{title}}</title>
+            </div>
+        
+           <style>
+               h1{
+                   text-align: center;
+               }
+               h3{
+                display: inline;
+               }
+               .error{
+                   color: red;
+               }
+               .content 
+               {
+                   max-width: 500px;
+                   margin: auto;
+               }
+           </style>
+       </head>
+       
+       <body>
+            <nav>
+                 <a href="/blog"><h3 style="float: left; text-align: left;">Main Blog Page</h3></a>
+                 <a href="/post"><h3 style="float: right; text-align: right;">Add a Blog Entry</h3></a> 
+                 <br>
+                 <br>
+                 <br>
+            </nav>
+        
+           {% block content %}
+           {% endblock %}
+       
+       </body>
+    </div>
 </html>
