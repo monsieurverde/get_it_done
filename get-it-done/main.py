@@ -41,7 +41,7 @@ def new_post():
         body_error = ''
 
         if not blog_title:
-            title_error = "Enter a blog title"
+            title_error = "Enter a title"
         if not blog_body:
             body_error = "Enter a blog entry"
 
