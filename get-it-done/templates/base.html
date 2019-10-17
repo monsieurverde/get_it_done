@@ -11,7 +11,7 @@
                    text-align: center;
                }
                h3{
-                display: inline;
+                display: inline-block;
                }
                .error{
                    color: red;
@@ -21,17 +21,26 @@
                    max-width: 500px;
                    margin: auto;
                }
+               section {
+                display: flex;
+                }
+                article {
+                  display: table-cell;
+                }
            </style>
        </head>
        
        <body>
+            
             <nav>
-                 <a href="/blog"><h3 style="float: left; text-align: left;">Main Blog Page</h3></a>
-                 <a href="/post"><h3 style="float: right; text-align: right;">Add a Blog Entry</h3></a> 
+                    <a href="/"><h3>Main Blog Page&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3></a>
+                    <a href="/newpost"><h3>Add a Blog Entry&nbsp;</h3></a>
+                    <a href="/logout" style="float: right;"><h3>Logout</h3></a>
                  <br>
                  <br>
                  <br>
             </nav>
+        
         
            {% block content %}
            {% endblock %}
